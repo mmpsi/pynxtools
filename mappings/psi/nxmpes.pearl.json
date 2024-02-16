@@ -1,0 +1,68 @@
+{
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/COLLECTIONCOLUMN[collectioncolumn]/scheme": "angular dispersive",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/amplifier_type": "MCP",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/detector_type": "Phosphor+CMOS",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/raw_data/@signal": "arb. units",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/raw_data/raw": {
+        "link": "/entry/image/ScientaImage"
+    },
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/pass_energy": "/scan1/attrs/PassEnergy",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/pass_energy/@units": "eV",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/scheme": "hemispherical",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/description": "EW4000",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/device_information/identifier": "ESxyz",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/device_information/model": "EW4000",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/device_information/vendor": "ScientaOmicron",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/work_function": "4.6",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/work_function/@units": "eV",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/associated_source": {
+        "link": "/entry/instrument/source_synchrotron"
+    },
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/distance": 0.0,
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/distance/@units": "mm",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/incident_energy": "/scan1/attrs/MonoEnergy",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/incident_energy/@units": "eV",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/source_synchrotron/associated_beam": {
+        "link": "/entry/instrument/beam_synchrotron"
+    },
+    "/ENTRY[entry]/INSTRUMENT[instrument]/source_synchrotron/name": "SLS/X03DA",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/source_synchrotron/type": "Synchrotron X-ray Source",
+
+    "/ENTRY[entry]/SAMPLE[sample]/name": "None",
+
+    "/ENTRY[entry]/DATA[data]/@axes": ["energy"],
+    "/ENTRY[entry]/DATA[data]/@energy_indices": 0,
+    "/ENTRY[entry]/DATA[data]/@signal": "data",
+    "/ENTRY[entry]/DATA[data]/data": "/scan1/ScientaSpectrum",
+    "/ENTRY[entry]/DATA[data]/data/@units": "arb. units",
+    "/ENTRY[entry]/DATA[data]/data/@long_name": "counts",
+    "/ENTRY[entry]/DATA[data]/energy": {
+        "link": "/entry/image/energy"
+    },
+    "/ENTRY[entry]/DATA[data]/energy/@type": "kinetic",
+    "/ENTRY[entry]/DATA[data]/energy/@units": "eV",
+    "/ENTRY[entry]/DATA[data]/energy/@long_name": "kinetic energy",
+
+
+    "/ENTRY[entry]/DATA[image]/@axes": [".", "energy"],
+    "/ENTRY[entry]/DATA[image]/@angle_indices": 0,
+    "/ENTRY[entry]/DATA[image]/@energy_indices": 1,
+    "/ENTRY[entry]/DATA[image]/@signal": "image",
+    "/ENTRY[entry]/DATA[image]/image": "/scan1/ScientaImage",
+    "/ENTRY[entry]/DATA[image]/image/@units": "arb. units",
+    "/ENTRY[entry]/DATA[image]/energy": "/scan1/ScientaChannels",
+    "/ENTRY[entry]/DATA[image]/energy/@type": "kinetic",
+    "/ENTRY[entry]/DATA[image]/energy/@units": "eV",
+
+    "/ENTRY[entry]/definition": "NXmpes",
+    "/ENTRY[entry]/definition/@version": "None",
+    "/ENTRY[entry]/start_time": "2000-01-01T00:00:00Z",
+    "/ENTRY[entry]/title": "None",
+    "/ENTRY[entry]/@default": "data",
+    "/@default": "entry"
+}

@@ -1,0 +1,179 @@
+! required field
+= constant
+- cannot be inferred from pshell file
+
+entry1:NXentry
+    @default = "data"
+    !definition
+        !@version
+    !title
+    !start_time
+    end_time
+    method
+    !data:NXdata
+        !@signal = "data"
+        !data -->
+            !@units = "arb. units"
+        !energy
+            !@units = "eV"
+            !@type = "kinetic"
+    !instrument:NXinstrument
+        source_x03da
+            associated_beam = "beam_x03da"
+            name = "SLS/X03DA"
+            type = "Synchrotron X-ray Source"
+        beam_x03da
+            associated_source = "source_x03da"
+            distance = 0
+                @units = "mm"
+            distance/@units": "None",
+            extent: "None",
+            !incident_energy
+                @units = "eV"
+        electronanalyser:NXelectronanalyser
+            !description = "Scienta EW4000"
+            device_information
+                identifier = "MS706???"
+                model = "EW4000"
+                vendor = "VG Scienta"
+            ?fast_axes = "energy, angle"
+            ?slow_axes = "energy"
+            work_function = 4.6
+                @units = "eV"
+            !collectioncolumn:NXcollectioncolumn
+                angular_acceptance = 60
+                mode (lens mode)
+                element_set???
+                !scheme = "angular dispersive"
+            !detector:NXdetector
+                amplifier_type = "MCP"
+                detector_type = "Phosphor+CMOS"
+                count_time???
+                acquisition_mode???
+            !energydispersion:NXenergydispersion
+                scheme = "hemispherical"
+                pass_energy
+                energy_scan_mode
+                -entrance_slit
+                -exit_slit
+        manipulator:NXmanipulator
+            device_information
+                identifier = "PEARL"
+                model = "Carving",
+                vendor" = "PSI",
+            drain_current_amperemeter
+                !measurement = "current",
+                name = "Keithley 6517B",
+                gain/range???
+                !value
+
+                // other NXsensor fields
+                @default-attribute = "value"
+                FABRICATION-group
+                model - Sensor identification code/model number
+                name - Name for the sensor
+                short_name - Short name of sensor used e.g. on monitor display program
+
+            temperature_sensor
+                !measurement": "temperature",
+                name: "Lakeshore XYZ",
+                type: "diode (which one?)",
+                !value": "None",
+        pressure_gauge
+            !measurement = "pressure",
+            name = "Epimax PVC"
+            type = "hot cathode"
+            !value
+                @units = "mbar"
+    !sample:NXsample
+        !name
+        position???
+        angle???
+        drain_current
+            amperemeter --> /scan1region1/instrument/manipulator/drain_current_amperemeter
+        gas_pressure
+            pressure_gauge --> /scan1region1/instrument/pressure_gauge
+        temperature
+            temperature/cryostat --> /entry/instrument/manipulator/cryostat
+            sample_heater --> /scan1region1/instrument/manipulator/sample_heater
+            temperature_sensor --> /scan1region1/instrument/manipulator/temperature_sensor
+        transforms:NXtransformations???
+    user:NXuser
+        name
+        -!affiliation
+    control:NXmonitor (I0)
+    beamline:NXcollection (beamline status information, not usually plotted)
+        mirror_pos
+        mirror_pos_set
+    log:NXlog (time stamped data)
+
+entry2:NXentry
+    same structure as entry1
+
+
+datasets in pshell but not used in nexus
+
+         DATASET "AcquisitionMode" {
+         DATASET "ChamberPressure" {
+         DATASET "DynamicBumpYAngle" {
+         DATASET "DynamicBumpYOffset" {
+         DATASET "ElementSet" {
+         DATASET "ExitSlit" {
+         DATASET "FocusWaterTemp" {
+         DATASET "FocusXRot" {
+         DATASET "FocusYRot" {
+         DATASET "FocusYTrans" {
+         DATASET "FocusZRot" {
+         DATASET "FocusZTrans" {
+         DATASET "FrontendHCenter" {
+         DATASET "FrontendHSize" {
+         DATASET "FrontendVCenter" {
+         DATASET "FrontendVSize" {
+         DATASET "MachineBumpXAngle" {
+         DATASET "MachineBumpXOffset" {
+         DATASET "MachineBumpYAngle" {
+         DATASET "MachineBumpYOffset" {
+         DATASET "MachineCurrent" {
+         DATASET "ManipulatorCoolFlow" {
+         DATASET "ManipulatorCoolFlowSet" {
+         DATASET "ManipulatorPhi" {
+         DATASET "ManipulatorTempA" {
+         DATASET "ManipulatorTempB" {
+         DATASET "ManipulatorTheta" {
+         DATASET "ManipulatorTilt" {
+         DATASET "ManipulatorX" {
+         DATASET "ManipulatorY" {
+         DATASET "ManipulatorZ" {
+         DATASET "MonoBeta" {
+         DATASET "MonoCff" {
+         DATASET "MonoEnergy" {
+         DATASET "MonoGrating" {
+         DATASET "MonoHCenter" {
+         DATASET "MonoHSize" {
+         DATASET "MonoTheta" {
+         DATASET "MonoVCenter" {
+         DATASET "MonoVSize" {
+         DATASET "NumIterations" {
+         DATASET "RefCurrent" {
+         DATASET "RefCurrentGain" {
+         DATASET "RefocusHCenter" {
+         DATASET "RefocusHSize" {
+         DATASET "RefocusVCenter" {
+         DATASET "RefocusVSize" {
+         DATASET "RefocusXRot" {
+         DATASET "RefocusYRot" {
+         DATASET "RefocusYTrans" {
+         DATASET "RefocusZRot" {
+         DATASET "RefocusZTrans" {
+         DATASET "SampleCurrentGain" {
+         DATASET "ScientaCenterEnergy" {
+         DATASET "ScientaChannelBegin" {
+         DATASET "ScientaChannelEnd" {
+         DATASET "ScientaDwellTime" {
+         DATASET "ScientaHighEnergy" {
+         DATASET "ScientaLowEnergy" {
+         DATASET "ScientaNumChannels" {
+         DATASET "ScientaNumSlices" {
+         DATASET "ScientaSliceBegin" {
+         DATASET "ScientaSliceEnd" {
+         DATASET "StepSize" {
