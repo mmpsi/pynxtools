@@ -17,6 +17,12 @@ entry1:NXentry
         !energy
             !@units = "eV"
             !@type = "kinetic"
+        angular0
+        angular1
+        angular2
+        spatial0
+        spatial1
+        photon_energy
     !instrument:NXinstrument
         source_x03da
             associated_beam = "beam_x03da"

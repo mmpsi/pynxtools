@@ -61,11 +61,10 @@
     },
     "/ENTRY[entry]/DATA[data]/energy/@type": "kinetic",
     "/ENTRY[entry]/DATA[data]/energy/@units": "eV",
-    "/ENTRY[entry]/DATA[data]/energy/@long_name": "kinetic energy",
+    "/ENTRY[entry]/DATA[data]/energy/@long_name": "kinetic energy (eV)",
 
-
-    "/ENTRY[entry]/DATA[image]/@axes": [".", "energy"],
-    "/ENTRY[entry]/DATA[image]/@angle_indices": 0,
+    "/ENTRY[entry]/DATA[image]/@axes": ["angular0", "energy"],
+    "/ENTRY[entry]/DATA[image]/@angular0_indices": 0,
     "/ENTRY[entry]/DATA[image]/@energy_indices": 1,
     "/ENTRY[entry]/DATA[image]/@signal": "image",
     "/ENTRY[entry]/DATA[image]/image": "/scan1/ScientaImage",
@@ -73,6 +72,14 @@
     "/ENTRY[entry]/DATA[image]/energy": "/scan1/ScientaChannels",
     "/ENTRY[entry]/DATA[image]/energy/@type": "kinetic",
     "/ENTRY[entry]/DATA[image]/energy/@units": "eV",
+    "/ENTRY[entry]/DATA[image]/angular0": {
+        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
+        "arg0": "/scan1/attrs/ScientaSliceBegin",
+        "arg1": "/scan1/attrs/ScientaSliceEnd",
+        "arg2": "/scan1/attrs/ScientaNumSlices"
+    },
+    "/ENTRY[entry]/DATA[image]/angular0/@units": "°",
+    "/ENTRY[entry]/DATA[image]/angular0/@long_name": "emission angle (°)",
 
     "/ENTRY[entry]/USER[user]/affiliation": "general/pgroup",
     "/ENTRY[entry]/USER[user]/name": "general/authors",
@@ -82,14 +89,14 @@
     "/ENTRY[entry]/start_time": {
         "parse_string":  "/logs/logs",
         "index": "0",
-        "regexp": "[0-9.:/]+ [0-9.:/]+",
+        "regexp": "^[0-9.:/]+ [0-9.:/]+",
         "datetime": "%d/%m/%y %H:%M:%S.%f",
         "timezone": "Europe/Zurich"
     },
     "/ENTRY[entry]/end_time": {
         "parse_string":  "/logs/logs",
         "index": "-1",
-        "regexp": "[0-9.:/]+ [0-9.:/]+",
+        "regexp": "^[0-9.:/]+ [0-9.:/]+",
         "dateutil": "dmy",
         "timezone": "Europe/Zurich"
     },

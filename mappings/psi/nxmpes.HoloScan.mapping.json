@@ -1,0 +1,252 @@
+{
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusXRot]/name": "FocusXRot",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusXRot]/description": "Focus mirror, pitch angle (surface normal axis)",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusXRot]/value": "/scan 1/attrs/FocusXRot",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusXRot]/value/@units": "mrad",
+
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusYRot]/name": "FocusYRot",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusYRot]/description": "Focus mirror, yaw angle (vertical axis)",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusYRot]/value": "/scan 1/attrs/FocusYRot",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusYRot]/value/@units": "mrad",
+
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusZRot]/name": "FocusZRot",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusZRot]/description": "Focus mirror, roll angle (beam axis)",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusZRot]/value": "/scan 1/attrs/FocusZRot",
+    "/ENTRY[entry]/COLLECTION[positioners]/POSITIONER[FocusZRot]/value/@units": "mrad",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/COLLECTIONCOLUMN[collectioncolumn]/scheme": "angular dispersive",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/amplifier_type": "MCP",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/detector_type": "Phosphor+CMOS",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/raw_data/@signal": "arb. units",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/raw_data/raw": {
+        "link": "/entry/image/image"
+    },
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/pass_energy": "/scan 1/attrs/PassEnergy",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/pass_energy/@units": "eV",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/scheme": "hemispherical",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/description": "EW4000",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/device_information/identifier": "ESxyz",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/device_information/model": "EW4000",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/device_information/vendor": "ScientaOmicron",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/work_function": "4.6",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/work_function/@units": "eV",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/device_information/identifier": "Carving/PEARL",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/device_information/model": "Carving Manipulator",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/device_information/vendor": "Paul Scherrer Institut",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/drain_current_amperemeter/measurement": "current",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/drain_current_amperemeter/name": "SampleCurrent",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/drain_current_amperemeter/model": "Keithley 6517B",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/drain_current_amperemeter/value": {
+        "link": "/entry/i1/data"
+    },
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/temperature_sensor/measurement": "temperature",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/temperature_sensor/name": "ManipulatorTempA",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/temperature_sensor/type": "Si diode",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/temperature_sensor/model": "Lakeshore DT-670",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/temperature_sensor/attached_to": "sample stage",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/MANIPULATOR[manipulator]/temperature_sensor/value": "/scan 1/attrs/ManipulatorTempA",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/pressure_gauge/measurement": "pressure",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/pressure_gauge/name": "ChamberPressure",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/pressure_gauge/type": "hot cathode",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/pressure_gauge/model": "Epimax PVCi",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/pressure_gauge/value": "/scan 1/attrs/ChamberPressure",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/pressure_gauge/value/@units": "mbar",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/associated_source": {
+        "link": "/entry/instrument/source_synchrotron"
+    },
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/distance": 0.0,
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/distance/@units": "mm",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/incident_energy": "/scan 1/attrs/MonoEnergy",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/beam_synchrotron/incident_energy/@units": "eV",
+
+    "/ENTRY[entry]/INSTRUMENT[instrument]/source_synchrotron/associated_beam": {
+        "link": "/entry/instrument/beam_synchrotron"
+    },
+    "/ENTRY[entry]/INSTRUMENT[instrument]/source_synchrotron/name": "SLS/X03DA",
+    "/ENTRY[entry]/INSTRUMENT[instrument]/source_synchrotron/type": "Synchrotron X-ray Source",
+
+    "/ENTRY[entry]/SAMPLE[sample]/name": "/general/sample",
+    "/ENTRY[entry]/SAMPLE[sample]/situation": "vacuum",
+    "/ENTRY[entry]/SAMPLE[sample]/drain_current/amperemeter": {
+        "link": "/entry/instrument/manipulator/drain_current_amperemeter"
+    },
+    "/ENTRY[entry]/SAMPLE[sample]/gas_pressure/pressure_gauge": {
+        "link": "/entry/instrument/pressure_gauge"
+    },
+    "/ENTRY[entry]/SAMPLE[sample]/temperature/temperature_sensor": {
+        "link": "/entry/instrument/manipulator/temperature_sensor"
+    },
+
+    "/ENTRY[entry]/DATA[i0]/@axes": ["angular1"],
+    "/ENTRY[entry]/DATA[i0]/@angular1_indices": 0,
+    "/ENTRY[entry]/DATA[i0]/@angular2_indices": 0,
+    "/ENTRY[entry]/DATA[i0]/@signal": "data",
+    "/ENTRY[entry]/DATA[i0]/data": "/scan 1/RefCurrent",
+    "/ENTRY[entry]/DATA[i0]/data/@units": "A",
+    "/ENTRY[entry]/DATA[i0]/data/@long_name": "reference current (A)",
+    "/ENTRY[entry]/DATA[i0]/angular1": {
+        "link": "/entry/image/angular1"
+    },
+    "/ENTRY[entry]/DATA[i0]/angular2": {
+        "link": "/entry/image/angular2"
+    },
+
+    "/ENTRY[entry]/DATA[i1]/@axes": ["angular1"],
+    "/ENTRY[entry]/DATA[i1]/@angular1_indices": 0,
+    "/ENTRY[entry]/DATA[i1]/@angular2_indices": 0,
+    "/ENTRY[entry]/DATA[i1]/@signal": "data",
+    "/ENTRY[entry]/DATA[i1]/data": "/scan 1/SampleCurrent",
+    "/ENTRY[entry]/DATA[i1]/data/@units": "A",
+    "/ENTRY[entry]/DATA[i1]/data/@long_name": "drain current (A)",
+    "/ENTRY[entry]/DATA[i1]/angular1": {
+        "link": "/entry/image/angular1"
+    },
+    "/ENTRY[entry]/DATA[i1]/angular2": {
+        "link": "/entry/image/angular2"
+    },
+
+    "/ENTRY[entry]/DATA[i2]/@axes": ["angular1"],
+    "/ENTRY[entry]/DATA[i2]/@angular1_indices": 0,
+    "/ENTRY[entry]/DATA[i2]/@angular2_indices": 0,
+    "/ENTRY[entry]/DATA[i2]/@signal": "data",
+    "/ENTRY[entry]/DATA[i2]/data": "/scan 1/MachineCurrent",
+    "/ENTRY[entry]/DATA[i2]/data/@units": "A",
+    "/ENTRY[entry]/DATA[i2]/data/@long_name": "machine current (A)",
+    "/ENTRY[entry]/DATA[i2]/angular1": {
+        "link": "/entry/image/angular1"
+    },
+    "/ENTRY[entry]/DATA[i2]/angular2": {
+        "link": "/entry/image/angular2"
+    },
+
+    "/ENTRY[entry]/DATA[counts]/@axes": ["angular1"],
+    "/ENTRY[entry]/DATA[counts]/@angular1_indices": 0,
+    "/ENTRY[entry]/DATA[counts]/@angular2_indices": 0,
+    "/ENTRY[entry]/DATA[counts]/@signal": "data",
+    "/ENTRY[entry]/DATA[counts]/data": "/scan 1/Counts",
+    "/ENTRY[entry]/DATA[counts]/data/@units": "arb. units",
+    "/ENTRY[entry]/DATA[counts]/data/@long_name": "counts",
+    "/ENTRY[entry]/DATA[counts]/angular1": {
+        "link": "/entry/image/angular1"
+    },
+    "/ENTRY[entry]/DATA[counts]/angular2": {
+        "link": "/entry/image/angular2"
+    },
+    "/ENTRY[entry]/DATA[counts]/angular3": {
+        "link": "/entry/image/angular3"
+    },
+
+    "/ENTRY[entry]/DATA[edm]/@axes": ["energy", "angular1"],
+    "/ENTRY[entry]/DATA[edm]/@energy_indices": 0,
+    "/ENTRY[entry]/DATA[edm]/@angular1_indices": 1,
+    "/ENTRY[entry]/DATA[edm]/@angular2_indices": 1,
+    "/ENTRY[entry]/DATA[edm]/@signal": "data",
+    "/ENTRY[entry]/DATA[edm]/data": "/scan 1/ImageEnergyDistribution",
+    "/ENTRY[entry]/DATA[edm]/data/@units": "arb. units",
+    "/ENTRY[entry]/DATA[edm]/data/@long_name": "counts",
+    "/ENTRY[entry]/DATA[edm]/energy": {
+        "link": "/entry/image/energy"
+    },
+    "/ENTRY[entry]/DATA[edm]/angular1": {
+        "link": "/entry/image/angular1"
+    },
+    "/ENTRY[entry]/DATA[edm]/angular2": {
+        "link": "/entry/image/angular2"
+    },
+    "/ENTRY[entry]/DATA[edm]/angular3": {
+        "link": "/entry/image/angular3"
+    },
+
+    "/ENTRY[entry]/DATA[data]": {
+        "link": "/entry/edm"
+    },
+
+    "/ENTRY[entry]/DATA[adm]/@axes": ["angular0", "angular1"],
+    "/ENTRY[entry]/DATA[adm]/@angular0_indices": 0,
+    "/ENTRY[entry]/DATA[adm]/@angular1_indices": 1,
+    "/ENTRY[entry]/DATA[adm]/@angular2_indices": 1,
+    "/ENTRY[entry]/DATA[adm]/@signal": "data",
+    "/ENTRY[entry]/DATA[adm]/data": "/scan 1/ImageAngleDistribution",
+    "/ENTRY[entry]/DATA[adm]/data/@units": "arb. units",
+    "/ENTRY[entry]/DATA[adm]/data/@long_name": "counts",
+    "/ENTRY[entry]/DATA[adm]/angular0": {
+        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
+        "arg0": "/scan 1/attrs/ScientaSliceBegin",
+        "arg1": "/scan 1/attrs/ScientaSliceEnd",
+        "arg2": "/scan 1/attrs/ScientaNumSlices"
+    },
+    "/ENTRY[entry]/DATA[adm]/angular0/@units": "°",
+    "/ENTRY[entry]/DATA[adm]/angular0/@long_name": "emission angle (°)",
+    "/ENTRY[entry]/DATA[adm]/angular1": {
+        "link": "/entry/image/angular1"
+    },
+    "/ENTRY[entry]/DATA[adm]/angular2": {
+        "link": "/entry/image/angular2"
+    },
+    "/ENTRY[entry]/DATA[adm]/angular3": {
+        "link": "/entry/image/angular3"
+    },
+
+    "/ENTRY[entry]/DATA[image]/@axes": ["angular0", "energy", "angular1"],
+    "/ENTRY[entry]/DATA[image]/@angular0_indices": 0,
+    "/ENTRY[entry]/DATA[image]/@energy_indices": 1,
+    "/ENTRY[entry]/DATA[image]/@angular1_indices": 2,
+    "/ENTRY[entry]/DATA[image]/@angular2_indices": 2,
+    "/ENTRY[entry]/DATA[image]/@signal": "image",
+    "/ENTRY[entry]/DATA[image]/image": "/scan 1/ScientaImage",
+    "/ENTRY[entry]/DATA[image]/image/@units": "arb. units",
+    "/ENTRY[entry]/DATA[image]/energy": {
+        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
+        "arg0": "/scan 1/attrs/ScientaChannelBegin",
+        "arg1": "/scan 1/attrs/ScientaChannelEnd",
+        "arg2": "/scan 1/attrs/ScientaNumChannels"
+    },
+    "/ENTRY[entry]/DATA[image]/energy/@type": "kinetic",
+    "/ENTRY[entry]/DATA[image]/energy/@units": "eV",
+    "/ENTRY[entry]/DATA[image]/angular0": {
+        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
+        "arg0": "/scan 1/attrs/ScientaSliceBegin",
+        "arg1": "/scan 1/attrs/ScientaSliceEnd",
+        "arg2": "/scan 1/attrs/ScientaNumSlices"
+    },
+    "/ENTRY[entry]/DATA[image]/angular0/@units": "°",
+    "/ENTRY[entry]/DATA[image]/angular0/@long_name": "emission angle (°)",
+    "/ENTRY[entry]/DATA[image]/angular1": "/scan 1/attrs/ManipulatorTheta",
+    "/ENTRY[entry]/DATA[image]/angular1/@units": "°",
+    "/ENTRY[entry]/DATA[image]/angular1/@long_name": "polar angle (°)",
+    "/ENTRY[entry]/DATA[image]/angular2": "/scan 1/attrs/ManipulatorPhi",
+    "/ENTRY[entry]/DATA[image]/angular2/@units": "°",
+    "/ENTRY[entry]/DATA[image]/angular2/@long_name": "azimuthal angle (°)",
+    "/ENTRY[entry]/DATA[image]/angular3": "/scan 1/attrs/ManipulatorTilt",
+    "/ENTRY[entry]/DATA[image]/angular3/@units": "°",
+    "/ENTRY[entry]/DATA[image]/angular3/@long_name": "tilt angle (°)",
+
+    "/ENTRY[entry]/USER[user]/affiliation": "/general/pgroup",
+    "/ENTRY[entry]/USER[user]/name": "/general/authors",
+
+    "/ENTRY[entry]/definition": "NXmpes",
+    "/ENTRY[entry]/definition/@version": "None",
+    "/ENTRY[entry]/start_time": {
+        "parse_string":  "/logs/logs",
+        "index": "0",
+        "regexp": "[0-9.:/]+ [0-9.:/]+",
+        "datetime": "%d/%m/%y %H:%M:%S.%f",
+        "timezone": "Europe/Zurich"
+    },
+    "/ENTRY[entry]/end_time": {
+        "parse_string":  "/logs/logs",
+        "index": "-1",
+        "regexp": "[0-9.:/]+ [0-9.:/]+",
+        "dateutil": "dmy",
+        "timezone": "Europe/Zurich"
+    },
+    "/ENTRY[entry]/title": "None",
+    "/ENTRY[entry]/@default": "data",
+    "/@default": "entry"
+}
