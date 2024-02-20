@@ -279,6 +279,21 @@ def eval_expressions(mapping, data):
         mapping[key] = value
 
 
+def compress(template):
+    """
+    Flag numpy arrays for compression
+
+    Numpy arrays with a size greater than 100 are flagged for compression with compression strength 4.
+    All other items are left untouched.
+
+    :param template:
+    :return: None
+    """
+    for key, value in template.items():
+        if isinstance(value, np.ndarray) and value.size > 100:
+            template[key] = {"compress": value, "strength": 4}
+
+
 class JsonMapReader(BaseReader):
     """A reader that takes a mapping json file and a data file/object to return a template."""
 
@@ -352,6 +367,7 @@ class JsonMapReader(BaseReader):
 
         fill_undocumented(mapping, new_template, data)
 
+        compress(new_template)
         return new_template
 
 
