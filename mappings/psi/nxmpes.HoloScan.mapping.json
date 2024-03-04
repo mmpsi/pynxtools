@@ -20,7 +20,7 @@
     "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/detector_type": "Phosphor+CMOS",
     "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/raw_data/@signal": "arb. units",
     "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/DETECTOR[detector]/raw_data/raw": {
-        "link": "/entry/image/image"
+        "link": "/entry/data/data"
     },
 
     "/ENTRY[entry]/INSTRUMENT[instrument]/ELECTRONANALYSER[electronanalyser]/ENERGYDISPERSION[energydispersion]/pass_energy": "/scan 1/attrs/PassEnergy",
@@ -91,10 +91,10 @@
     "/ENTRY[entry]/DATA[i0]/data/@units": "A",
     "/ENTRY[entry]/DATA[i0]/data/@long_name": "reference current (A)",
     "/ENTRY[entry]/DATA[i0]/angular1": {
-        "link": "/entry/image/angular1"
+        "link": "/entry/data/angular1"
     },
     "/ENTRY[entry]/DATA[i0]/angular2": {
-        "link": "/entry/image/angular2"
+        "link": "/entry/data/angular2"
     },
 
     "/ENTRY[entry]/DATA[i1]/@axes": ["angular1"],
@@ -105,10 +105,10 @@
     "/ENTRY[entry]/DATA[i1]/data/@units": "A",
     "/ENTRY[entry]/DATA[i1]/data/@long_name": "drain current (A)",
     "/ENTRY[entry]/DATA[i1]/angular1": {
-        "link": "/entry/image/angular1"
+        "link": "/entry/data/angular1"
     },
     "/ENTRY[entry]/DATA[i1]/angular2": {
-        "link": "/entry/image/angular2"
+        "link": "/entry/data/angular2"
     },
 
     "/ENTRY[entry]/DATA[i2]/@axes": ["angular1"],
@@ -119,10 +119,10 @@
     "/ENTRY[entry]/DATA[i2]/data/@units": "A",
     "/ENTRY[entry]/DATA[i2]/data/@long_name": "machine current (A)",
     "/ENTRY[entry]/DATA[i2]/angular1": {
-        "link": "/entry/image/angular1"
+        "link": "/entry/data/angular1"
     },
     "/ENTRY[entry]/DATA[i2]/angular2": {
-        "link": "/entry/image/angular2"
+        "link": "/entry/data/angular2"
     },
 
     "/ENTRY[entry]/DATA[counts]/@axes": ["angular1"],
@@ -133,99 +133,91 @@
     "/ENTRY[entry]/DATA[counts]/data/@units": "arb. units",
     "/ENTRY[entry]/DATA[counts]/data/@long_name": "counts",
     "/ENTRY[entry]/DATA[counts]/angular1": {
-        "link": "/entry/image/angular1"
+        "link": "/entry/data/angular1"
     },
     "/ENTRY[entry]/DATA[counts]/angular2": {
-        "link": "/entry/image/angular2"
+        "link": "/entry/data/angular2"
     },
     "/ENTRY[entry]/DATA[counts]/angular3": {
-        "link": "/entry/image/angular3"
+        "link": "/entry/data/angular3"
     },
 
-    "/ENTRY[entry]/DATA[edm]/@axes": ["energy", "angular1"],
-    "/ENTRY[entry]/DATA[edm]/@energy_indices": 0,
-    "/ENTRY[entry]/DATA[edm]/@angular1_indices": 1,
-    "/ENTRY[entry]/DATA[edm]/@angular2_indices": 1,
+    "/ENTRY[entry]/DATA[edm]/@axes": [".", "energy"],
+    "/ENTRY[entry]/DATA[edm]/@energy_indices": 1,
+    "/ENTRY[entry]/DATA[edm]/@angular1_indices": 0,
+    "/ENTRY[entry]/DATA[edm]/@angular2_indices": 0,
     "/ENTRY[entry]/DATA[edm]/@signal": "data",
     "/ENTRY[entry]/DATA[edm]/data": "/scan 1/ImageEnergyDistribution",
     "/ENTRY[entry]/DATA[edm]/data/@units": "arb. units",
     "/ENTRY[entry]/DATA[edm]/data/@long_name": "counts",
     "/ENTRY[entry]/DATA[edm]/energy": {
-        "link": "/entry/image/energy"
+        "link": "/entry/data/energy"
     },
     "/ENTRY[entry]/DATA[edm]/angular1": {
-        "link": "/entry/image/angular1"
+        "link": "/entry/data/angular1"
     },
     "/ENTRY[entry]/DATA[edm]/angular2": {
-        "link": "/entry/image/angular2"
+        "link": "/entry/data/angular2"
     },
     "/ENTRY[entry]/DATA[edm]/angular3": {
-        "link": "/entry/image/angular3"
+        "link": "/entry/data/angular3"
     },
 
-    "/ENTRY[entry]/DATA[data]": {
-        "link": "/entry/edm"
-    },
-
-    "/ENTRY[entry]/DATA[adm]/@axes": ["angular0", "angular1"],
-    "/ENTRY[entry]/DATA[adm]/@angular0_indices": 0,
-    "/ENTRY[entry]/DATA[adm]/@angular1_indices": 1,
-    "/ENTRY[entry]/DATA[adm]/@angular2_indices": 1,
+    "/ENTRY[entry]/DATA[adm]/@axes": [".", "angular0"],
+    "/ENTRY[entry]/DATA[adm]/@angular0_indices": 1,
+    "/ENTRY[entry]/DATA[adm]/@angular1_indices": 0,
+    "/ENTRY[entry]/DATA[adm]/@angular2_indices": 0,
     "/ENTRY[entry]/DATA[adm]/@signal": "data",
     "/ENTRY[entry]/DATA[adm]/data": "/scan 1/ImageAngleDistribution",
     "/ENTRY[entry]/DATA[adm]/data/@units": "arb. units",
     "/ENTRY[entry]/DATA[adm]/data/@long_name": "counts",
     "/ENTRY[entry]/DATA[adm]/angular0": {
-        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
-        "arg0": "/scan 1/attrs/ScientaSliceBegin",
-        "arg1": "/scan 1/attrs/ScientaSliceEnd",
-        "arg2": "/scan 1/attrs/ScientaNumSlices"
+        "link": "/entry/data/angular0"
     },
-    "/ENTRY[entry]/DATA[adm]/angular0/@units": "°",
-    "/ENTRY[entry]/DATA[adm]/angular0/@long_name": "emission angle (°)",
     "/ENTRY[entry]/DATA[adm]/angular1": {
-        "link": "/entry/image/angular1"
+        "link": "/entry/data/angular1"
     },
     "/ENTRY[entry]/DATA[adm]/angular2": {
-        "link": "/entry/image/angular2"
+        "link": "/entry/data/angular2"
     },
     "/ENTRY[entry]/DATA[adm]/angular3": {
-        "link": "/entry/image/angular3"
+        "link": "/entry/data/angular3"
     },
 
-    "/ENTRY[entry]/DATA[image]/@axes": ["angular0", "energy", "angular1"],
-    "/ENTRY[entry]/DATA[image]/@angular0_indices": 0,
-    "/ENTRY[entry]/DATA[image]/@energy_indices": 1,
-    "/ENTRY[entry]/DATA[image]/@angular1_indices": 2,
-    "/ENTRY[entry]/DATA[image]/@angular2_indices": 2,
-    "/ENTRY[entry]/DATA[image]/@signal": "image",
-    "/ENTRY[entry]/DATA[image]/image": "/scan 1/ScientaImage",
-    "/ENTRY[entry]/DATA[image]/image/@units": "arb. units",
-    "/ENTRY[entry]/DATA[image]/energy": {
-        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
+    "/ENTRY[entry]/DATA[data]/@axes": ["angular0", "energy", "angular1"],
+    "/ENTRY[entry]/DATA[data]/@angular0_indices": 0,
+    "/ENTRY[entry]/DATA[data]/@energy_indices": 1,
+    "/ENTRY[entry]/DATA[data]/@angular1_indices": 2,
+    "/ENTRY[entry]/DATA[data]/@angular2_indices": 2,
+    "/ENTRY[entry]/DATA[data]/@signal": "data",
+    "/ENTRY[entry]/DATA[data]/data": "/scan 1/ScientaImage",
+    "/ENTRY[entry]/DATA[data]/data/@units": "arb. units",
+    "/ENTRY[entry]/DATA[data]/energy": {
+        "eval": "np.linspace(arg0[0], arg1[0], arg2.shape[1])",
         "arg0": "/scan 1/attrs/ScientaChannelBegin",
         "arg1": "/scan 1/attrs/ScientaChannelEnd",
-        "arg2": "/scan 1/attrs/ScientaNumChannels"
+        "arg2": "/scan 1/ScientaImage"
     },
-    "/ENTRY[entry]/DATA[image]/energy/@type": "kinetic",
-    "/ENTRY[entry]/DATA[image]/energy/@units": "eV",
-    "/ENTRY[entry]/DATA[image]/angular0": {
-        "eval": "np.linspace(arg0[0], arg1[0], int(arg2[0]))",
+    "/ENTRY[entry]/DATA[data]/energy/@type": "kinetic",
+    "/ENTRY[entry]/DATA[data]/energy/@units": "eV",
+    "/ENTRY[entry]/DATA[data]/energy/@long_name": "kinetic energy (eV)",
+    "/ENTRY[entry]/DATA[data]/angular0": {
+        "eval": "np.linspace(arg0[0], arg1[0], arg2.shape[0])",
         "arg0": "/scan 1/attrs/ScientaSliceBegin",
         "arg1": "/scan 1/attrs/ScientaSliceEnd",
-        "arg2": "/scan 1/attrs/ScientaNumSlices"
+        "arg2": "/scan 1/ScientaImage"
     },
-    "/ENTRY[entry]/DATA[image]/angular0/@units": "°",
-    "/ENTRY[entry]/DATA[image]/angular0/@long_name": "emission angle (°)",
-    "/ENTRY[entry]/DATA[image]/angular1": "/scan 1/attrs/ManipulatorTheta",
-    "/ENTRY[entry]/DATA[image]/angular1/@units": "°",
-    "/ENTRY[entry]/DATA[image]/angular1/@long_name": "polar angle (°)",
-    "/ENTRY[entry]/DATA[image]/angular2": "/scan 1/attrs/ManipulatorPhi",
-    "/ENTRY[entry]/DATA[image]/angular2/@units": "°",
-    "/ENTRY[entry]/DATA[image]/angular2/@long_name": "azimuthal angle (°)",
-    "/ENTRY[entry]/DATA[image]/angular3": "/scan 1/attrs/ManipulatorTilt",
-    "/ENTRY[entry]/DATA[image]/angular3/@units": "°",
-    "/ENTRY[entry]/DATA[image]/angular3/@long_name": "tilt angle (°)",
+    "/ENTRY[entry]/DATA[data]/angular0/@units": "°",
+    "/ENTRY[entry]/DATA[data]/angular0/@long_name": "emission angle (°)",
+    "/ENTRY[entry]/DATA[data]/angular1": "/scan 1/attrs/ManipulatorTheta",
+    "/ENTRY[entry]/DATA[data]/angular1/@units": "°",
+    "/ENTRY[entry]/DATA[data]/angular1/@long_name": "polar angle (°)",
+    "/ENTRY[entry]/DATA[data]/angular2": "/scan 1/attrs/ManipulatorPhi",
+    "/ENTRY[entry]/DATA[data]/angular2/@units": "°",
+    "/ENTRY[entry]/DATA[data]/angular2/@long_name": "azimuthal angle (°)",
+    "/ENTRY[entry]/DATA[data]/angular3": "/scan 1/attrs/ManipulatorTilt",
+    "/ENTRY[entry]/DATA[data]/angular3/@units": "°",
+    "/ENTRY[entry]/DATA[data]/angular3/@long_name": "tilt angle (°)",
 
     "/ENTRY[entry]/USER[user]/affiliation": "/general/pgroup",
     "/ENTRY[entry]/USER[user]/name": "/general/authors",
@@ -247,6 +239,6 @@
         "timezone": "Europe/Zurich"
     },
     "/ENTRY[entry]/title": "None",
-    "/ENTRY[entry]/@default": "data",
+    "/ENTRY[entry]/@default": "adm",
     "/@default": "entry"
 }
